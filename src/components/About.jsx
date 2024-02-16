@@ -13,7 +13,6 @@ function About() {
             <li>Try Harder.</li>
             <li>Use the "{'>'}" button to check if you remebered right.</li>
             <li>Delete any card with the delte icon.</li>
-            <li>This a static website so if you reload you will lose cards.</li>
         </ul>
       </div>
       <Footer/>

@@ -141,3 +141,34 @@ ul li{
   width: 60%;
   margin: auto;
 }
+/* design login */
+.login{
+  background-color: white;
+  width: 60%;
+  margin: auto;
+  margin-top: 1.3rem;
+  border-radius: 2%;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+.form {
+  padding: 1.2rem;
+  text-align: center;
+}
+.bttn{
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: wheat;
+  padding: 1rem;
+  border-radius: 2%;
+}
+.bttn:hover{
+  background-color: whitesmoke;
+}
+.bttn1{
+  border-right: 1px solid black;
+}
+.form input{
+  width: 50%;
+  padding: 1rem;
+}

@@ -3,7 +3,7 @@ import React from "react";
 function Note(props) {
 const uniqueId = `carousel-${props.id}`;
   function handleClick() {
-    props.onDelete(props.id);
+    props.onDelete(props.content);
   }
   
   return (

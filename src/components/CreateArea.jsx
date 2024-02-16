@@ -9,6 +9,8 @@ function CreateArea(props) {
     content: ""
   });
 
+  const username = props.user
+
   function handleChange(event) {
     const { name, value } = event.target;
 
@@ -21,11 +23,34 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
-    props.onAdd(note);
+    const credentials = {username, note };
+
+    
+    // send the credentials to the backend
+
+    try {
+        const response =  fetch('https://memory-mosiac-37193ea89723.herokuapp.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(credentials),
+        });
+       
+        console.log(response);        
+        if (response.ok) {
+          console.log('Submission successful');
+        } else {
+          console.error('Submission failed');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
     setNote({
       title: "",
       content: ""
     });
+    props.onAdd();
     event.preventDefault();
   }
 
