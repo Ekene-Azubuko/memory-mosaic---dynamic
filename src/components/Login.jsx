@@ -32,7 +32,7 @@ function Login(props) {
     
         if (response.ok) {
         //   setLoggedin= true;
-          props.decision(data.success) 
+          props.decision(data.success, credentials.username) 
           console.log('Login successful', data);
           // Handle successful login here (e.g., redirecting the user or storing the login token)
         } else {
@@ -71,10 +71,10 @@ function Login(props) {
         //   setLoggedin= true;
           props.decision(data.success, credentials.username) 
           console.log('Login successful', data);
-          // Handle successful login here (e.g., redirecting the user or storing the login token)
+          // Handle successful login here 
         } else {
           console.error('Login failed', data.message);
-          // Handle login failure here (e.g., showing an error message)
+          // Handle login failure here 
         }
       } catch (error) {
         console.error('Error:', error);
